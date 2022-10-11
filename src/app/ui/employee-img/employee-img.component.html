@@ -1,6 +1,6 @@
-<div *ngFor="let employee of data$ | async" class="card d-inline-block bg-dark text-white my-2 mx-2" style="width: 15rem;">
+<section *ngFor="let employee of data$ | async" class="card d-inline-block bg-dark text-white my-2 mx-2" style="width: 15rem;">
   <img [src]="employee.img" class="card-img-top" alt="employee photo">
   <div class="card-body">
     <h5 class="card-title text-center">{{employee.name}}</h5>
   </div>
-</div>
+</section>
