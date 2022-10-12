@@ -1,0 +1,8 @@
+<h3 class="mx-2 py-3">Project List</h3>
+<section *ngFor="let project of data$ | async" class="d-inline-block bg-white text-dark text-center my-2 mx-2 py-2" style="width: 15rem; height:15rem;">
+  <div class="d-flex flex-column align-items-center justify-content-start">
+  <p>{{project.name}}</p>
+  <p>{{project.owner}}</p>
+  <p>{{project.description}}</p>
+  </div>
+</section>
