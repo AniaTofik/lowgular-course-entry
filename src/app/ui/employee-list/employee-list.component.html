@@ -1,6 +1,6 @@
 <h3 class="mx-2 py-3">Employee List</h3>
 <section *ngIf="data$ | async as data; else empty" class="mx-2">
-  <p *ngFor="let employee of data">{{ employee.personalNumber }}: {{ employee.name }} : {{employee.mail}}</p>
+  <p *ngFor="let employee of data">{{ employee.personalNumber }}: {{ employee.name }} : {{employee.mail}}<button class="btn btn-dark bg-dark text-light ms-2"(click)="remove(employee.personalNumber)">Delete</button></p>
 </section>
 <ng-template #empty> There is no data </ng-template>
 

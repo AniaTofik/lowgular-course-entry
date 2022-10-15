@@ -1,16 +1,15 @@
 <h3 class="mx-2 py-3">Employee Form</h3>
-<form [formGroup]="employeeForm" (ngSubmit)="onEmployeeFormSubmitted(employeeForm)"
+<form [formGroup]="employeeForm" (ngSubmit)="onEmployeeFormSubmitted(employeeForm.value)"
       (submit)="onButtonClicked(employeeForm.value)">
   <input type="text" formControlName="name" placeholder="Name">
   <input type="text" formControlName="age" placeholder="Age">
   <input type="text" formControlName="salary" placeholder="Salary">
   <input type="submit" [disabled]="employeeForm.invalid" value="Submit">
   <div class="py-3">
-    <p>Your new employee:
+    <p> Your new employee:
     {{employeeForm.value.name}},
     age: {{employeeForm.value.age}} with
-    salary {{employeeForm.value.salary}}$will be added to the system.
-</p>
+      salary {{employeeForm.value.salary}}$will be added to the system.</p>
   </div>
 </form>
 
